@@ -389,7 +389,7 @@ for sinco in sorted(sincos_en_datos):
         "IRG_mujer_2026": round(irg_m, 5),
         "IRG_hombre_2026":round(irg_h, 5),
         "brecha_pp":      round((irg_m - irg_h) * 100, 3),
-        "fuente_pct_mujeres": "ENOE microdatos 2020-2025 (notebook compañera)",
+        "fuente_pct_mujeres": "ENOE microdatos 2020-2025",
     })
 
 TABLA = pd.DataFrame(filas).sort_values("IRG_mujer_2026", ascending=False)
