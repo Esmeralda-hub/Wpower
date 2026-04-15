@@ -579,8 +579,8 @@ ax_a.set_ylabel("% mujeres en empleos STEM", fontsize=10)
 ax_a.legend(fontsize=9)
 ax_a.grid(axis="y", alpha=0.3, linestyle="--")
 ax_a.set_title(
-    "① % Mujeres en STEM — Serie temporal calculada desde microdatos ENOE\n"
-    f"Fuente: datos_finales_stem.csv (notebook Nayeli) · {len(df_stem):,} registros · "
+    "1 % Mujeres en STEM — Serie temporal calculada desde microdatos ENOE\n"
+     f"{len(df_stem):,} registros · "
     f"SINCO prefijos 13,16,22,26",
     fontsize=10
 )
@@ -602,7 +602,7 @@ for i, (_, row) in enumerate(top15.iterrows()):
               f"{row['pct_mujeres_ENOE_calculado']:.1f}%\n(n={row['n_total_enoe']:,})",
               va="center", fontsize=6.5)
 
-ax_b.set_title("② % Mujeres por SINCO\n(Top 15 por volumen · microdatos ENOE)")
+ax_b.set_title("2 % Mujeres por SINCO\n(Top 15 por volumen · microdatos ENOE)")
 
 
 # Panel C: IRG por ocupación 
@@ -624,7 +624,7 @@ ax_c.set_yticklabels(
 ax_c.set_xlabel("IRG — Índice de Riesgo de Género", fontsize=10)
 ax_c.legend(fontsize=9)
 ax_c.set_title(
-    "③ IRG 2026 — Top 20 ocupaciones (entre paréntesis: % mujeres calculado desde ENOE microdatos)\n"
+    "3 IRG 2026 — Top 20 ocupaciones (% mujeres calculado desde ENOE microdatos)\n"
     "P_FO: Frey-Osborne 2017 Appendix · β_obs: Anthropic 2026 · δ=+2pp: FMI 2018",
     fontsize=9.5
 )
@@ -650,7 +650,7 @@ if not df_comp.empty:
     ax_d.set_xlabel("% mujeres CIEP (Q3 2023 publicado)", fontsize=8.5)
     ax_d.set_ylabel("% mujeres ENOE microdatos (2020–2025)", fontsize=8.5)
     ax_d.legend(fontsize=8)
-    ax_d.set_title("④ Validación cruzada:\nCIEP publicado vs. microdatos calculados")
+    ax_d.set_title("4 Validación cruzada:\nCIEP publicado vs. microdatos calculados")
     ax_d.text(0.02, 0.97,
         "Puntos cerca de la diagonal =\nconsistencia entre fuentes",
         transform=ax_d.transAxes, fontsize=7, va="top",
@@ -658,7 +658,7 @@ if not df_comp.empty:
 else:
     ax_d.text(0.5, 0.5, "Datos insuficientes\npara comparación",
               ha="center", va="center", transform=ax_d.transAxes, fontsize=10)
-    ax_d.set_title("④ Validación cruzada CIEP vs. microdatos")
+    ax_d.set_title("4 Validación cruzada CIEP vs. microdatos")
 
 
 # Panel E: Proyección temporal 
@@ -714,7 +714,7 @@ ax_e.set_xlabel("Año", fontsize=10)
 ax_e.set_ylabel("IRG ponderado (por mujeres en ENOE)", fontsize=10)
 ax_e.grid(axis="y", alpha=0.3, linestyle="--")
 ax_e.set_title(
-    "Proyección IRG × serie temporal ENOE observada\n"
+    " 5 Proyección IRG × serie temporal ENOE observada\n"
     f"Ponderado por n_mujeres reales por ocupación · {total_muj_enoe_real:,} registros femeninos ENOE",
     fontsize=10
 )
@@ -739,7 +739,7 @@ ax_f.set_ylabel("Mujeres STEM expuestas al riesgo (n)", fontsize=9)
 ax_f.legend(fontsize=8, loc="upper left")
 ax_f.grid(axis="y", alpha=0.3)
 ax_f.set_title(
-    "⑥ Cuantificación del riesgo\n"
+    "6 Cuantificación del riesgo\n"
     "Stock base = mujeres reales en datos_finales_stem.csv"
 )
 
