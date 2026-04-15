@@ -746,13 +746,13 @@ ax_f.set_title(
 
 #Títulos 
 fig.text(0.5, 0.987,
-    "IRG v3 — ENOE Microdatos Reales + Frey-Osborne + Anthropic + UNESCO + OCDE",
+    "IRG v3 — ENOE Microdatos",
     ha="center", fontsize=15, fontweight="bold", color="#0D1B2A")
 fig.text(0.5, 0.977,
     f"WPower · {len(df_stem):,} registros ENOE (2020–2025) · ODS 5  · México",
     ha="center", fontsize=10, color="#444", style="italic")
 fig.text(0.5, 0.003,
-    "ENOE microdatos 2020-2025 (notebook Nayeli/INEGI) · CIEP 2024 · CEPAL 2024 · "
+    "ENOE microdatos 2020-2025 (INEGI) · CIEP 2024 · CEPAL 2024 · "
     "OCDE Employment Outlook 2023 · UNESCO UIS 2024 · Frey & Osborne (2017) Appendix · "
     "Massenkoff & McCrory / Anthropic (2026) · FMI Brussevich et al. (2018) · Gallup (2025)",
     ha="center", fontsize=6, color="gray", style="italic")
