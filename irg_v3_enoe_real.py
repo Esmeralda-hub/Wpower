@@ -765,7 +765,7 @@ TABLA.to_csv("tabla_irg_v3.csv", index=False, encoding="utf-8-sig")
 print("  [OK] Tabla exportada: tabla_irg_v3.csv")
 
 #  Exportar CSV con IRG aplicado a TODOS los registros 
-print("\n  Aplicando IRG a todos los registros del CSV de tu compañera...")
+print("\n  Aplicando IRG a todos los registros del CSV de Pao")
 df_completo = aplicar_irg(df_stem[["ent","p3","sex","periodo","año","trimestre"]], año=2026)
 df_completo.to_csv("datos_finales_stem_con_irg.csv", index=False)
 print(f"  [OK] Exportado: datos_finales_stem_con_irg.csv ({len(df_completo):,} filas)")
