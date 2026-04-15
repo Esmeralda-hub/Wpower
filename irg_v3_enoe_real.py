@@ -354,6 +354,7 @@ def peso_ola(ola: str, año: int) -> float:
         return min(0.90 + 0.40 * (1.0 / (1 + np.exp(-0.6 * (año - peak)))), 1.30)
 
 #ocupaciondes unicas 
+sincos_en_datos = df_stem["p3"].unique()
 print(f"\n  Ocupaciones SINCO únicas en datos_finales_stem.csv: {len(sincos_en_datos)}")
 
 # Construir tabla 
