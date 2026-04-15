@@ -129,7 +129,7 @@ except FileNotFoundError:
             registros.append({"ent": ent, "p3": codigo, "sex": sex, "periodo": periodo})
 
     df_enoe = pd.DataFrame(registros)
-    print(f"  ✓ Demo generado: {len(df_enoe):,} registros (misma estructura del notebook)")
+    print(f"  ✓ Demo generado: {len(df_enoe):,} registros")
     df_enoe.to_csv("datos_finales_stem_demo.csv", index=False)
     print("  → Guardado como datos_finales_stem_demo.csv para referencia")
 
