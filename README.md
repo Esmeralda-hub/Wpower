@@ -20,7 +20,7 @@ El IRG nace de un problema concreto: las mujeres representan apenas el 12.9% de 
 Lo que hacemos es cruzar los códigos SINCO de la ENOE con probabilidades de automatización de tres fuentes distintas y agregar un componente de género. La formulación quedó así:
 
 ```
-IRG = P_Frey-Osborne × β_Anthropic × W_ola × (1 + δ_género) × Gallup_factor
+IRG = P_FO × β_obs × W_ola × (1 + δ_género) × Gallup_factor
 ```
 
 Desglosando cada término:
