@@ -8,8 +8,7 @@
 ║    datos_finales_stem.csv — 834,067 registros ENOE reales                  ║
 ║    Columnas: ent | p3 | sex | periodo                                       ║
 ║                                                                              ║
-
-║                                                                              ║
+                                                                      ║
 ║  Fuentes de los demás inputs        :                                      ║
 ║    Frey & Osborne (2017) Appendix — probabilidades exactas                 ║
 ║    Anthropic/Massenkoff & McCrory (2026) — observed exposure               ║
@@ -714,7 +713,7 @@ ax_e.set_xlabel("Año", fontsize=10)
 ax_e.set_ylabel("IRG ponderado (por mujeres en ENOE)", fontsize=10)
 ax_e.grid(axis="y", alpha=0.3, linestyle="--")
 ax_e.set_title(
-    "⑤ Proyección IRG × serie temporal ENOE observada\n"
+    "Proyección IRG × serie temporal ENOE observada\n"
     f"Ponderado por n_mujeres reales por ocupación · {total_muj_enoe_real:,} registros femeninos ENOE",
     fontsize=10
 )
@@ -744,7 +743,7 @@ ax_f.set_title(
 )
 
 
-# ── Títulos ──────────────────────────────────────────────────────────────
+#Títulos 
 fig.text(0.5, 0.987,
     "IRG v3 — ENOE Microdatos Reales + Frey-Osborne + Anthropic + UNESCO + OCDE",
     ha="center", fontsize=15, fontweight="bold", color="#0D1B2A")
@@ -760,11 +759,11 @@ fig.text(0.5, 0.003,
 plt.savefig("irg_v3_enoe_real.png", dpi=150, bbox_inches="tight", facecolor="#FAFAFA")
 print("\n  [OK] Dashboard guardado: irg_v3_enoe_real.png")
 
-# ── Exportar tabla IRG enriquecida ────────────────────────────────────────
+#  Exportar tabla IRG enriquecida 
 TABLA.to_csv("tabla_irg_v3.csv", index=False, encoding="utf-8-sig")
 print("  [OK] Tabla exportada: tabla_irg_v3.csv")
 
-# ── Exportar CSV con IRG aplicado a TODOS los registros ──────────────────
+#  Exportar CSV con IRG aplicado a TODOS los registros 
 print("\n  Aplicando IRG a todos los registros del CSV de tu compañera...")
 df_completo = aplicar_irg(df_stem[["ent","p3","sex","periodo","año","trimestre"]], año=2026)
 df_completo.to_csv("datos_finales_stem_con_irg.csv", index=False)
@@ -776,9 +775,9 @@ print(f"""
 ╠══════════════════════════════════════════════════════════════════╣
 ║  Registros ENOE procesados:  {len(df_stem):>10,}                       ║
 ║  Ocupaciones SINCO únicas:   {len(TABLA):>10,}                       ║
-║  Mujeres en STEM (muestra):  {total_muj_enoe_real:>10,}                       ║
-║  % mujeres global calculado: {pct_global_mujeres:>10.1f}%                      ║
-║                                                                  ║
+║  Mujeres en STEM (muestra):  {total_muj_enoe_real:>10,}              ║
+║  % mujeres global calculado: {pct_global_mujeres:>10.1f}%           
+║                                                                  
          ║
 ╚══════════════════════════════════════════════════════════════════╝
 """)
